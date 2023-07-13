@@ -157,6 +157,16 @@
   .faculdade-curso-idioma h3 {
     margin-bottom: 20px;
   }
+  .faculdade-idioma::before {
+    content: "";
+    width: 100px;
+    height: 40px;
+    background: url("./img/idiomas.svg") no-repeat;
+    position: absolute;
+    top: 37px;
+    left: -35px;
+  }
+
   .cursos span {
     margin-top: 20px;
   }
