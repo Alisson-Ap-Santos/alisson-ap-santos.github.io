@@ -1,0 +1,106 @@
+.conteudo {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.titulo h1 {
+  font-size: 4.5rem;
+  line-height: 1.125;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.titulo h1::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url("./img/detalhe.svg") no-repeat center;
+  position: absolute;
+  top: -15px;
+  left: -40px;
+  z-index: -1;
+}
+
+.titulo p {
+  font-size: 1.5rem;
+  color: #525252;
+}
+
+@media (max-width: 1000px) {
+  .titulo h1 {
+    font-size: 3rem;
+    line-height: 1.125;
+  }
+  .titulo h1::before {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 65px;
+    background: url("./img/detalhe.svg") no-repeat center;
+    position: absolute;
+    top: -15px;
+    left: -40px;
+    z-index: -1;
+  }
+}
+
+@media (max-width: 800px) {
+  .titulo h1 {
+    font-size: 2.25rem;
+    line-height: 1.125;
+  }
+
+  .titulo p {
+    font-size: 1rem;
+  }
+
+  .titulo h1::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 10px;
+    background: url("./img/detalhe.svg") no-repeat center;
+    position: absolute;
+    top: -15px;
+    left: 0px;
+  }
+
+  .conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+  .titulo h1 {
+    font-size: 2.5rem;
+    line-height: 1.125;
+    position: relative;
+    margin-bottom: 15px;
+  }
+
+  .titulo h1::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 10px;
+    background: url("./img/detalhe.svg") no-repeat center;
+    position: absolute;
+    top: -15px;
+    left: 0px;
+  }
+
+  .conteudo img {
+    display: none;
+  }
+}

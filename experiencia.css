@@ -1,0 +1,137 @@
+.experiencia {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 0 auto;
+  gap: 100px;
+  padding: 40px 20px;
+}
+
+.titulo-global {
+  font-size: 8rem;
+  line-height: 1;
+  text-transform: uppercase;
+  word-break: break-all;
+  max-width: 4ch;
+  color: #e0e0e0;
+}
+
+@media (max-width: 800px) {
+  .titulo-global {
+    font-size: 3rem;
+    text-transform: capitalize;
+    max-width: initial !important;
+  }
+}
+.trabalhos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  padding: 20px;
+  background: #f5f5f5;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.trabalhos::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(#b6f829, #67dd0a);
+  position: absolute;
+  top: 20px;
+  left: -4px;
+}
+
+.ano {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 22px;
+  left: -100px;
+  font-size: 0.875rem;
+  text-align: right;
+  width: 80px;
+  color: #525252;
+}
+
+.experiencia-me {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  color: #525252;
+  max-width: 40ch;
+  margin-bottom: 60px;
+}
+
+.experiencia-me strong {
+  color: #141414;
+}
+
+.trabalhos ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 10px;
+  align-content: start;
+}
+
+.trabalhos li {
+  padding: 10px;
+  background: #fff;
+  border-radius: 4px;
+  color: #525252;
+  font-size: 0.875rem;
+}
+
+.titulos-experiencia {
+  font-size: 1.125rem;
+  line-height: 1.1;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.trabalhos p {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #525252;
+}
+
+@media (max-width: 800px) {
+  .experiencia {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .titulo-global {
+    color: #141414;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+  }
+  .experiencia-me {
+    font-size: 1.25rem;
+    margin-bottom: 50px;
+  }
+  .ano {
+    position: initial;
+    order: 1;
+    width: initial;
+    text-align: left;
+  }
+
+  .trabalhos::before {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 20px;
+    background: linear-gradient(#70da1c, #70da1c);
+    position: absolute;
+    top: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .trabalhos {
+    grid-template-columns: 1fr;
+  }
+}
